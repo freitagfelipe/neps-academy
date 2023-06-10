@@ -35,10 +35,6 @@ struct Point2D {
 
         return this->x < t.x;
     }
-
-    bool operator=(const Point2D &t) const {
-        return this->x == t.x && this->y == t.y;
-    }
 };
 
 template <typename T>
