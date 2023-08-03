@@ -17,7 +17,7 @@ int solver(vector<vector<int>> &v, int i, int j) {
             --j;
         } else if (v[i + 1][j] == 1) {
             ++i;
-        } else if (v[i - 1][j] == 1){
+        } else if (v[i - 1][j] == 1) {
             --i;
         } else {
             ++answer;

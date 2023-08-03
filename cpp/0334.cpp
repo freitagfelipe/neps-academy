@@ -22,7 +22,7 @@ int main() {
     sort(v, v + n, greater<int>());
 
     for(int i {}; i < n; i++) {
-        if(v[i] >= sum - v[i]){
+        if(v[i] >= sum - v[i]) {
             ans--;
 
             sum -= v[i];

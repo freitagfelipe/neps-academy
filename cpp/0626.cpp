@@ -5,13 +5,13 @@ using namespace std;
 #define MAXN 110
 
 vector<int> g[MAXN];
-bitset<MAXN> visited;
+bitset<MAXN> marked;
 
 void dfs(int v) {
-    visited[v] = true;
+    marked[v] = true;
 
     for (int u : g[v]) {
-        if (!visited[u]) {
+        if (!marked[u]) {
             dfs(u);
         }
     }
@@ -41,7 +41,7 @@ int main() {
         int comp {};
 
         for (int i {}; i < n; ++i) {
-            if (!visited[i]) {
+            if (!marked[i]) {
                 ++comp;
 
                 dfs(i);
@@ -50,7 +50,7 @@ int main() {
 
         comp == 1 ? cout << "normal\n\n" : cout << "falha\n\n";
 
-        visited.reset();
+        marked.reset();
 
         for (int i {}; i < n; ++i) {
             g[i].resize(0);

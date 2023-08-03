@@ -6,13 +6,13 @@ using namespace std;
 
 int n;
 vector<int> g[MAXN], gt[MAXN], ts, comp(MAXN, -1);
-bitset<MAXN> visited;
+bitset<MAXN> marked;
 
 void ts_dfs(int v) {
-    visited[v] = true;
+    marked[v] = true;
 
     for (int u : g[v]) {
-        if (!visited[u]) {
+        if (!marked[u]) {
             ts_dfs(u);
         }
     }
@@ -32,7 +32,7 @@ void comp_dfs(int v, int c) {
 
 bool scc() {
     for (int i {}; i < n; ++i) {
-        if (!visited[i]) {
+        if (!marked[i]) {
             ts_dfs(i);
         }
     }
