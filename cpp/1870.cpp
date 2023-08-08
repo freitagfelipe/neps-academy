@@ -50,8 +50,8 @@ int range_query(int l, int r) {
 }
 
 int main() {
-    // ios::sync_with_stdio(false);
-    // cin.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
 
     int q;
 
